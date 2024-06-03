@@ -3,23 +3,24 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 U = 45
-f = 600
-a = 15 * 10**(-3)
-b = 45 * 10**(-3)
-c = 45 * 10**(-3)
-d = 20 * 10**(-3)
-dmax = 5 * 10**(-3)
+f = 350
+a = 10 * 10**(-3)
+b = 50 * 10**(-3)
+c = 30 * 10**(-3)
+d = 10 * 10**(-3)
+dmax = 2 * 10**(-3)
 mu = 9000
 mu0 = 4 * np.pi * 10**(-7)
-omega = 500
-q = 1.539
+omega = 350
+q = 1.651
 Tyst = 50
 deltaT = Tyst - 20
-Rh = 14
+Rh = 2
 Kes = 0.9
 Ro20grad = 0.0175
 alpha = 0.00411
-sigma = np.arange(0, 0.0021, 0.0001)
+sigma = np.arange(0, 0.0051, 0.005/20)
+print(f'len: {len(sigma)}\narray: {sigma}')
 
 Rmc = (2*(b + c) + np.pi * a) / (mu * mu0 * a * d * Kes)
 print(f'Rmc: {Rmc}\n')

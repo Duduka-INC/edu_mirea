@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from transfer import decart_to_cilinder
+from transfer import decart_to_scara
 
 R = np.array([0.05, 0.04, 0.03])
 h = np.array([0.6, 0.6, 0.2])
@@ -8,9 +8,9 @@ ro = 2712
 m, M = [], []
 
 x = np.array([0.3, 0.5, 0.7, 0.7, 0.6, 0.4, 0.4, 0.3, 0.3])
-y = np.array([0.3, 0.3, 0.3, 0.7, 0.5, 0.5, 0.7, 0.5, 0.3]) + 0.4
+y = np.array([0.3, 0.3, 0.3, 0.7, 0.5, 0.5, 0.7, 0.5, 0.3])
 
-q1, q2 = decart_to_cilinder(x, y)
+q1, q2 = decart_to_scara(x, y)
 
 for i in range(len(R)):
     m.append(R[i]**2 * h[i] * ro)

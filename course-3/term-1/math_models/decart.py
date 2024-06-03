@@ -1,11 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from decart_to_cilinder import decart_to_cilinder
 
-x = np.array([0.3, 0.5, 0.7, 0.7, 0.6, 0.4, 0.4, 0.3, 0.3])
-y = np.array([0.3, 0.3, 0.3, 0.7, 0.5, 0.5, 0.7, 0.5, 0.3])
+r = 0.05
+l = 0.6
+m = 8
+J = (m * r**2) / 2
 
-print(f'x: {x}\n\ny: {y}\n')
+x = np.array([0.5, 0.5, 0.6, 0.6, 0.7, 0.7, 0.8, 0.8, 0.5])
+y = np.array([0.5, 0.8, 0.8, 0.7, 0.7, 0.6, 0.6, 0.5, 0.5])
+
+print(f"J: {J}\n")
+print(f'x: {x}\ny: {y}\n')
 
 plt.grid()
 plt.plot(x, y)

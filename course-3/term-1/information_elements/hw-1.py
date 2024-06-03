@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 x = np.arange(-0.5, 0.55, 0.05)
-U = 76
-R = 4800
-Rn = 300000
+U = 16
+R = 800
+Rn = 50000
 
 Uout = U * x
 Uoutn = U*x*Rn/(R*np.abs(x)+Rn-R*(x)**2)
